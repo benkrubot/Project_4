@@ -9,7 +9,11 @@ import random
 root = Tk()
 root.geometry("500x400")
 numbers = []
-data_set = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+data_set = []
+
+#Creating random integers and adding to data set
+for i in range(20):
+    data_set.append(random.randint(1,20))
 
 #Creating and randomly populating boxes
 for x in range(10):
@@ -49,7 +53,7 @@ def get_smallest_val():
 #Creating button and label
 val_but = Button(root, text = "Find the smallest number", command = get_smallest_val)
 val_but.place(x = 170, y = 325)
-cur_label = Label(root, text = "")
+cur_label = Label(root, text = "Current Lowest Value: ")
 cur_label.place(x = 176, y = 355)
 
 root.mainloop()
