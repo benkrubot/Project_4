@@ -28,6 +28,7 @@ def get_smallest_val():
     #it will change the color, then remove it from the data set
     global numbers
     global val
+    #global small_num
     small_num = None
     placeholder = None
 
@@ -55,5 +56,8 @@ val_but = Button(root, text = "Find the smallest number", command = get_smallest
 val_but.place(x = 170, y = 325)
 cur_label = Label(root, text = "Current Lowest Value: ")
 cur_label.place(x = 176, y = 355)
+
+# def test_answer():
+#     assert small_num not in numbers
 
 root.mainloop()
